@@ -209,7 +209,7 @@ main {
 
 
 .btn {
-  border-radius: 20%;
+  border-radius: 50%;
   margin: 5px;
   border-width: 0ch;
   object-fit: cover;
@@ -219,7 +219,7 @@ main {
 }
 
 .btn:hover {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.301);
 }
 
 .github {
@@ -236,6 +236,5 @@ main {
 }
 
 .socialIcon {
-  background-color: #fff;
   width: 100%;
 }

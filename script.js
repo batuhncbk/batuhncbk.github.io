@@ -1,8 +1,6 @@
-function myFunction() {
-    var x = document.getElementById("myTopnav");
-    if (x.className === "topnav") {
-      x.className += " responsive";
-    } else {
-      x.className = "topnav";
-    }
-  }
+const navToggle = document.querySelector(".nav-toggle");
+const links = document.querySelector(".links");
+
+navToggle.addEventListener("click", function(){
+    links.classList.toggle("show-links");
+});

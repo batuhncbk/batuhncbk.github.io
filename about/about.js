@@ -31,7 +31,6 @@ const navToggle = document.querySelector(".nav-toggle");
 const links = document.querySelector(".links");
 const prevBtn = document.querySelector(".prev-btn");
 const nextBtn = document.querySelector(".next-btn");
-const randomBtn = document.querySelector(".random-btn");
 
 let currentItem =0;
 
@@ -63,12 +62,7 @@ prevBtn.addEventListener("click", function() {
         showPerson();
 });
 
-randomBtn.addEventListener("click", function() {
-    window.open("https://github.com/batuhncbk");
-});
-
 
 navToggle.addEventListener("click", function(){
     links.classList.toggle("show-links");
 });
-

@@ -3,7 +3,7 @@
 Fonts
 ===============
 */
-@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Space+Mono:wght@400;700&display=swap");
 
 /*
 =============== 
@@ -45,8 +45,8 @@ Variables
   --clr-green-light: hsl(125, 71%, 66%);
   --clr-black: #222;
   --clr-dark: rgb(0, 0, 0);
-  --ff-primary: "Roboto", sans-serif;
-  --ff-secondary: "Open Sans", sans-serif;
+  --ff-primary: 'Space Mono', monospace;
+  --ff-secondary: 'Space Mono', monospace;
   --transition: all 0.3s linear;
   --spacing: 0.1rem;
   --radius: 0.25rem;
@@ -69,8 +69,7 @@ Global Styles
   box-sizing: border-box;
 }
 body {
-  background-image: url("potato_wall.png");  
-  background-size: cover;
+  background-image: url("/background_image.jpg");  
   font-family: var(--ff-secondary);
   color: var(--clr-white);
   line-height: 1.5;
@@ -162,11 +161,7 @@ Navbar
 ===============
 */
 nav {
-  border-radius: 20px;
-  border-color: #fff;
-  border-width: 5px;
-  border-style:double;
-  background: var(--clr-dark);
+  background: #222;
   box-shadow: var(--light-shadow);
 }
 .nav-header {
@@ -188,7 +183,7 @@ nav {
   transform: rotate(90deg);
 }
 .logo {
-  height: 40px;
+  height: 30px;
 }
 .links a {
   color: var(--clr-white);
@@ -217,16 +212,11 @@ nav {
 }
 @media screen and (min-width: 800px) {
   .nav-center {
-    max-width: 1170px;
     margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1rem;
-    border-radius: 20px;
-    border-color: #fff;
-    border-width: 5px;
-    border-style:double;
+    padding: 6px; 
   }
   .nav-header {
     padding: 0;
@@ -257,27 +247,27 @@ nav {
   .social-icons a:hover {
     color: var(--clr-pure-white);
   }
+
 }
 .word-container {
   color: #fff;
-  background-color: black;
+  background-color: #222;
   border-radius: 20px;
-  border-color: #fff;
-  border-width: 5px;
-  border-style:double;
   width: 44%;
   margin-left: 28%;
   margin-top: 1%;
   margin-bottom: 1%;
   padding-top: 1%;
+  padding-bottom: 0.4%;
   text-align: center;
 }
 .video-container {
     width: 100%;
+    padding: 5%;
+    text-align: center;
 }
 .youtube-video {
-  margin-left: 20%;
-  margin-block-end: 0.5%;
+  width: 100%;
   border-radius: 20px;
   border-color: #fff;
   border-width: 5px;
@@ -285,19 +275,23 @@ nav {
 }
 .rocket {
   background-color: #fff;
-  width: 4%;
-  margin-left: 13%;
+  width: 60px;
   border-radius: 20px;
   border-color: rgb(0, 0, 0);
   border-width: 5px;
   border-style:double;
+  margin: 1%;
 }
 .trophy {
   background-color: #fff;
-  width: 4%;
-  margin-left: 13%;
+  width: 60px;
   border-radius: 20px;
   border-color: rgb(0, 0, 0);
   border-width: 5px;
   border-style:double;
+  margin: 1%;
+}
+.icon-container {
+  width: 100%;
+  text-align: center;
 }

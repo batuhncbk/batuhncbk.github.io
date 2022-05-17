@@ -3,7 +3,7 @@
 Fonts
 ===============
 */
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Space+Mono:wght@400;700&display=swap");
 
 /*
 =============== 
@@ -46,8 +46,8 @@ Variables
   --clr-black: #222;
   --clr-dark: rgb(0, 0, 0);
   --clr-transparent-black: rgba(34, 34, 34, 0.9);
-  --ff-primary: "Roboto", monospace;
-  --ff-secondary: "Roboto ", monospace;
+  --ff-primary: 'Space Mono', monospace;
+  --ff-secondary: 'Space Mono', monospace;
   --transition: all 0.3s linear;
   --spacing: 0.1rem;
   --radius: 0.25rem;
@@ -71,7 +71,7 @@ Global Styles
 }
 body {
   background-image: url("/background_image.jpg");  
-  font-family: var(--ff-secondary);
+  font-family: 'Space Mono', monospace;
   color: var(--clr-white);
   line-height: 1.5;
   font-size: 0.875rem;
@@ -90,7 +90,7 @@ h4 {
   text-transform: capitalize;
   line-height: 1.25;
   margin-bottom: 0.75rem;
-  font-family: var(--ff-primary);
+  font-family: 'Space Mono', monospace;
 }
 h1 {
   font-size: 3rem;

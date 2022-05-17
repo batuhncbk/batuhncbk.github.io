@@ -3,7 +3,7 @@
 Fonts
 ===============
 */
-@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Space+Mono:wght@400;700&display=swap");
 
 /*
 =============== 
@@ -47,8 +47,8 @@ Variables
   --clr-black: #222;
   --clr-dark: rgb(0, 0, 0);
   --clr-transparent-black: rgba(34, 34, 34, 0.9);
-  --ff-primary: "Roboto", sans-serif;
-  --ff-secondary: "Open Sans", sans-serif;
+  --ff-primary: "Roboto Mono", monospace;
+  --ff-secondary: "Roboto Mono", monospace;
   --transition: all 0.3s linear;
   --spacing: 0.1rem;
   --radius: 0.25rem;
@@ -71,9 +71,8 @@ Global Styles
   box-sizing: border-box;
 }
 body {
-  background-image: url("potato_wall.png");  
-  background-size: cover;
-  font-family: var(--ff-secondary);
+  background-image: url("/background_image.jpg");  
+  font-family: 'Space Mono', monospace;
   color: var(--clr-white);
   line-height: 1.5;
   font-size: 0.875rem;
@@ -92,7 +91,7 @@ h4 {
   text-transform: capitalize;
   line-height: 1.25;
   margin-bottom: 0.75rem;
-  font-family: var(--ff-primary);
+  font-family: 'Space Mono', monospace;
 }
 h1 {
   font-size: 3rem;
@@ -164,12 +163,8 @@ Navbar
 ===============
 */
 nav {
-  background: var(--clr-dark);
+  background: #222;
   box-shadow: var(--light-shadow);
-  border-radius: 20px;
-  border-color: #fff;
-  border-width: 5px;
-  border-style:double;
 }
 .nav-header {
   display: flex;
@@ -190,7 +185,7 @@ nav {
   transform: rotate(90deg);
 }
 .logo {
-  height: 40px;
+  height: 30px;
 }
 .links a {
   color: var(--clr-white);
@@ -219,16 +214,11 @@ nav {
 }
 @media screen and (min-width: 800px) {
   .nav-center {
-    max-width: 1170px;
     margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1rem;
-    border-radius: 20px;
-    border-color: #fff;
-    border-width: 5px;
-    border-style:double;
+    padding: 6px;
   }
   .nav-header {
     padding: 0;
@@ -262,18 +252,17 @@ nav {
 }
 .word-container {
   border-radius: 20px;
-  border-color: #fff;
-  border-width: 5px;
-  border-style:double;
   margin-top: 5%;
+  margin-left: 20%;
+  margin-right: 20%;
   color: var(--clr-white);
-  background: var(--clr-dark);
+  background: #222;
   padding-top: 1%;
   font-size: 150%;
 }
 .btn-container {
   text-align: center;
-  padding-right: 10%;
+  width: 100%;
 }
 .btn-instagram,.btn-linkedin {
   border-radius: 20px;

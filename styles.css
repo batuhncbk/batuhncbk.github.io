@@ -1,0 +1,113 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+}
+
+header {
+    background-color: #333;
+    color: #fff8cf;
+    text-align: center;
+    padding: 1rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+}
+
+.section-content {
+    padding: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.recent-image {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.recent-image img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.article {
+    width: calc(50% - 20px);
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    vertical-align: top;
+}
+
+@media (max-width: 768px) {
+    .section-content {
+        padding: 1rem;
+    }
+
+    .article {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.article a {
+    display: inline-block;
+    background-color: #fff8cf;
+    color: #000000;
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.article a:hover {
+    background-color: #ff9933;
+}
+
+.centered-heading h2 {
+    font-size: 24px;
+    color: #333;
+    border-bottom: 2px solid #333;
+
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    bottom: 0;
+    width: 100%;
+}
+
+
+
+/* Diğer stil kodları... */
+

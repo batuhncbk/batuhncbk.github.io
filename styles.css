@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Inter', Helvetica, Arial, sans-serif;
+    background-color: #2d2d2d;
+    color: #f0f0f0;
+}
+
+header {
+    background-color: #101014;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    color: #f0f0f0;
+}
+
+main {
+    text-align: center;
+    padding: 20px;
+    background-color: #18181C;
+}
+
+.profile-pic img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-top: 20px;
+}
+
+h2, h3 {
+    margin: 10px 0;
+}
+
+.email {
+    margin: 10px 0;
+    display: inline-block;
+    color: #13aff0;
+}
+
+.email a {
+    text-decoration: none; /* E-posta linki altını çizisini kaldırın */
+    color: #13aff0;
+}
+
+.location {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.location img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.email {
+    margin: 10px 0;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.social-links img {
+    width: 40px;
+    height: 40px;
+}
+
+.separator {
+    height: 2px;
+    width: 50%;
+    margin: 0 auto;
+    background-color: #92929e;
+}
+
+.summary {
+    width: 50%;
+    margin: 20px auto;
+    padding: 20px;
+    text-align: left;
+    background-image: url('path_to_your_background_image.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #f0f0f0;
+}
+
+footer {
+    background-color: black;
+    text-align: center;
+    padding: 10px;
+}
+
+footer p {
+    margin: 0;
+    color: #f0f0f0;
+}

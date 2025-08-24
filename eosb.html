@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ders Portalı</title>
+<style>
+:root {
+  --bg: #000000;
+  --card: #1a1a1a;
+  --text: #ffffff;
+  --border: #333333;
+  --button-bg: #1a1a1a;
+  --button-hover: #333333;
+  --button-active: #555555;
+  --button-text: #ffffff;
+  --link: #ffffff;
+}
+body.light {
+  --bg: #f2f2f7;
+  --card: #ffffff;
+  --text: #000000;
+  --border: #e0e0e0;
+  --button-bg: #ffffff;
+  --button-hover: #e5e5ea;
+  --button-active: #cccccc;
+  --button-text: #000000;
+  --link: #000000;
+}
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background: var(--bg);
+  margin: 0;
+  padding: 0;
+  color: var(--text);
+  transition: all 0.4s ease;
+}
+header {
+  background: var(--card);
+  padding: 1rem;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  color: var(--text);
+}
+.mode-toggle {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: var(--button-bg);
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 1.2rem;
+  color: var(--button-text);
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+  transition: background 0.3s;
+}
+.mode-toggle:hover { background: var(--button-hover); }
+.tabs { display: flex; flex-wrap: wrap; gap: 0.5rem; padding: 1rem; justify-content: center; background: var(--bg);}
+.tab-button {
+  padding: 0.6rem 1.2rem; border-radius: 20px; border: none;
+  background: var(--button-bg); font-size: 0.95rem; font-weight: 500;
+  color: var(--button-text); box-shadow: 0 2px 5px rgba(0,0,0,0.4);
+  transition: all 0.3s; cursor: pointer;
+}
+.tab-button:hover { background: var(--button-hover); transform: translateY(-2px); }
+.tab-button.active { background: var(--button-active); color: var(--text); transform: translateY(0); }
+.content { display: none; padding: 1rem; opacity: 0; transition: opacity 0.4s ease; }
+.content.active { display: flex; flex-wrap: wrap; gap: 2rem; opacity: 1; }
+.section { flex: 1; min-width: 300px; background: var(--card); padding: 1rem; border-radius: 15px; box-shadow: 0 2px 6px rgba(0,0,0,0.6); transition: background 0.3s, transform 0.3s;}
+.section:hover { transform: translateY(-2px); }
+.section h2.title { display: flex; align-items: center; justify-content: center; gap: 0.5rem; font-size: 1.2rem; margin-bottom: 0.5rem; border-bottom: 1px solid var(--border); padding-bottom: 0.3rem; color: var(--text);}
+.section h2.title .icon { font-size: 1.2rem; }
+ul { list-style: none; padding: 0; }
+ul li { margin: 0.5rem 0; }
+a, .accordion-button, .accordion-content p {
+  font-family: inherit; font-size: 0.95rem; font-weight: 500; color: var(--link); text-decoration: none; line-height: 1.4; cursor: pointer;
+}
+a:hover { text-decoration: underline; }
+.accordion-button {
+  width: 100%; background: var(--card); border: none; border-radius: 10px;
+  text-align: left; padding: 0.5rem 1rem; margin: 0.2rem 0;
+  color: var(--link); transition: background 0.3s, transform 0.2s;
+}
+.accordion-button:hover { background: var(--button-hover); transform: translateX(2px);}
+.accordion-button.active { background: var(--button-active); color: var(--text);}
+.accordion-content {
+  max-height: 0; overflow: hidden; transition: max-height 0.5s ease, padding 0.3s ease;
+  background: var(--card); margin-top: 0.3rem; border-radius: 10px; padding: 0 1rem;
+}
+.accordion-button.active + .accordion-content { max-height: 300px; padding: 0.5rem 1rem; }
+</style>
+</head>
+<body>
+<header>📍 BATUHAN ÇABUK DUYURU PANOSU 📍
+  <button class="mode-toggle" id="modeToggle">🌙</button>
+</header>
+
+<div class="tabs">
+  <button class="tab-button active" data-tab="mmr">Makine Meslek Resmi</button>
+  <button class="tab-button" data-tab="kmr">Kalıp Meslek Resmi</button>
+  <button class="tab-button" data-tab="mekanizma">Mekanizma Çizimleri</button>
+  <button class="tab-button" data-tab="yazici">3D Tarayıcı & Yazıcı</button>
+  <button class="tab-button" data-tab="teknik">Teknik Resim</button>
+  <button class="tab-button" data-tab="imalat">Temel İmalat İşlemleri</button>
+  <button class="tab-button" data-tab="gelisim">Mesleki Gelişim</button>
+</div>
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------------------------------->
+<div id="mmr" class="content active">
+  <div class="section">
+    <h2 class="title"><span class="icon">🎬</span>VİDEO<span class="icon">🎬</span></h2>
+    <ul>
+      <li><a href="#"><br>🌱 Temel Çizim Eğitimi<br></a></li>
+      <li><a href="#"><br>🌿 Örnek Proje Anlatımı<br></a></li>
+    </ul>
+  </div>
+  <div class="section">
+    <h2 class="title"><span class="icon">🔔</span>DUYURU<span class="icon">🔔</span></h2>
+    <ul>
+      <li><button class="accordion-button">🍗 PERFORMANS ÖDEVİ 1</button>
+          <div class="accordion-content"><p>Bu ödev dosyası Makine Meslek Resmi dersi için hazırlanmıştır.</p></div>
+      </li>
+      <li><button class="accordion-button">🍖 PERFORMANS ÖDEVİ 2</button>
+          <div class="accordion-content"><p>Ders boyunca işlenen konuların özeti.</p></div>
+      </li>
+      <li><button class="accordion-button">🥩 PROJE ÖDEVİ</button>
+          <div class="accordion-content"><p>Ders boyunca işlenen konuların özeti.</p></div>
+      </li>
+    </ul>
+  </div>
+</div>
+<!----------------------------------------------------------------------------------------------------->
+<div id="kmr" class="content">
+  <div class="section">
+    <h2 class="title"><span class="icon">🎬</span>VİDEO<span class="icon">🎬</span></h2>
+    <ul><li><a href="#">Kalıp Tanıtımı</a></li></ul>
+  </div>
+  <div class="section">
+    <h2 class="title"><span class="icon">🔔</span>DUYURU<span class="icon">🔔</span></h2>
+    <ul>
+      <li><button class="accordion-button">Proje Ödevi</button>
+          <div class="accordion-content"><p>Bu proje ödevi Kalıp Meslek Resmi dersi için hazırlanmıştır.</p></div>
+      </li>
+    </ul>
+  </div>
+</div>
+<!----------------------------------------------------------------------------------------------------->
+
+
+
+
+
+
+
+
+
+
+
+<script>
+const buttons = document.querySelectorAll('.tab-button');
+const contents = document.querySelectorAll('.content');
+buttons.forEach(btn => {
+  btn.addEventListener('click', ()=>{
+    buttons.forEach(b=>b.classList.remove('active'));
+    contents.forEach(c=>c.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById(btn.dataset.tab).classList.add('active');
+  });
+});
+
+const modeToggle = document.getElementById('modeToggle');
+const body = document.body;
+modeToggle.addEventListener('click', ()=>{
+  body.classList.toggle('light');
+  modeToggle.textContent = body.classList.contains('light') ? "☀️" : "🌙";
+});
+
+const accButtons = document.querySelectorAll('.accordion-button');
+accButtons.forEach(btn=>{
+  btn.addEventListener('click', ()=>{
+    btn.classList.toggle('active');
+  });
+});
+</script>
+</body>
+</html>
